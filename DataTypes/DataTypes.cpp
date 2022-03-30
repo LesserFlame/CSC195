@@ -30,7 +30,7 @@ int main()
     int ages[4]; // [xx,xx,xx,xx] xx xx xx xx xx xx
     ages[0] = 24;
     ages[1] = 10;
-    ages[32] = 56;
+  
 
     cin >> name;
     cout << name;
@@ -39,6 +39,7 @@ int main()
     cout << skittlz::i << endl;
 
     cout << "Hello World!\n";
+    cout << "Ello There!\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
