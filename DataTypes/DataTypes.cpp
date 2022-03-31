@@ -16,39 +16,54 @@ namespace skittlz
 void f() {}
 int main()
 {
-    skittlz::f();
-    int i = -34;
-    float f = 23.12;
-    bool b = 12;
     string name;
+    char initial;
+    int age;
+    bool isAdult;
+    int zipcode;
+    float wage;
+    int daysWorked;
+    int hoursWorkedPerDay[7];
 
-    //const makes it so that the variable cannot be changed, it's constant
-    const float TAX = 0.085;
-    char initial = 'J';
+    const float tax = 0.085;
 
-    //brakets always come after var name
-    int ages[4]; // [xx,xx,xx,xx] xx xx xx xx xx xx
-    ages[0] = 24;
-    ages[1] = 10;
-  
-
+    cout << "Enter thy first name: ";
     cin >> name;
-    cout << name;
 
-    if (i) cout << "true\n";
-    cout << skittlz::i << endl;
+    cout << "Enter thy last initial: ";
+    cin >> initial;
 
-    cout << "Hello World!\n";
-    cout << "Ello There!\n";
+    cout << "Enter thy age: ";
+    cin >> age;
+
+    cout << "Enter thy zip code: ";
+    cin >> zipcode;
+
+    cout << "Enter thy wage: ";
+    cin >> wage;
+
+    cout << "Enter thy days worked: ";
+    cin >> daysWorked;
+
+
+    if (age >= 18)
+    {
+        isAdult = true;
+    }
+    else
+    {
+        isAdult = false;
+    }
+
+    int totalHrs = 0;
+
+    for (int i = 0; i < daysWorked; i++) {
+        cout << "Enter thy hours for day " << i + 1 << ": ";
+        cin >> hoursWorkedPerDay[i];
+        totalHrs += hoursWorkedPerDay[i];
+    }
+    float grossInc = totalHrs * wage;
+    float netInc = (grossInc * tax) + grossInc;
+
+    cout << "Gross Income: $" << grossInc << "\nNet Income: $" << netInc;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
