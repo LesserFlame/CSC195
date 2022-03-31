@@ -7,13 +7,6 @@
 //makes it so you don't have to typr std:: to access something in the standard library
 using namespace std;
 
-namespace skittlz
-{
-    int i = 10;
-    void f() {}
-}
-
-void f() {}
 int main()
 {
     string name;
