@@ -38,7 +38,8 @@ int main()
     cout << "Enter thy days worked: ";
     cin >> daysWorked;
 
-
+    //old way:
+    /*
     if (age >= 18)
     {
         isAdult = true;
@@ -47,6 +48,9 @@ int main()
     {
         isAdult = false;
     }
+    */
+    //better way:
+    isAdult = (age >= 18);
 
     int totalHrs = 0;
 
